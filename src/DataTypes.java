@@ -17,7 +17,6 @@ public class DataTypes {
         System.out.println("Is Employee Active:");
         boolean is_active = input.nextBoolean();
 
-
         System.out.println();
         System.out.println("Employee Details:");
         System.out.println("\tName: " + name);
