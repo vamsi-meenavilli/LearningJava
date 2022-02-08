@@ -1,6 +1,7 @@
 package Employee;
 
 import java.util.Date;
+import java.util.List;
 
 public class Details {
     private int id;
@@ -9,9 +10,9 @@ public class Details {
     private String email;
     private String sex;
     private Date date_of_joining;
-    private String[] skills;
+    private List<String> skills;
 
-    public Details(int id, String first_name, String last_name, String email, Sex sex, Date date_of_joining, String[] skills) {
+    public Details(int id, String first_name, String last_name, String email, Sex sex, Date date_of_joining, List<String> skills) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -69,11 +70,15 @@ public class Details {
         this.date_of_joining = date_of_joining;
     }
 
-    public String[] GetSkills() {
-        return skills;
+    public List<String> GetSkills() {
+        return this.skills;
     }
 
-    public void SetSkills(String[] skills) {
-        this.skills = skills;
+    public String GetSkill(int index) {
+        return this.skills.get(index);
+    }
+
+    public void SetSkill(String skill) {
+        this.skills.add(skill);
     }
 }
